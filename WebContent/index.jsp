@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Hello World!</title>
+<meta charset="UTF-8">
+<title>JSP BBS</title>
 </head>
 <body>
-Hello World!
+	<script>
+		location.href='login.jsp';
+	</script>
 </body>
 </html>

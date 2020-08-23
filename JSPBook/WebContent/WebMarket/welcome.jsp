@@ -11,11 +11,12 @@
 <title>Web market</title>
 </head>
 <body>
-	<nav class = "navbar navbar-expand navbar-dark bg-dark">
+	<!-- <nav class = "navbar navbar-expand navbar-dark bg-dark">
 		<div class = "navbar-header">
 			<a class = "navbar-brand" href="./welcome.jsp">Home</a>
 		</div>
-	</nav>
+	</nav> -->
+	<%@ include file="menu.jsp" %>
 	<%! 
 		String greeting = "Welcome!";
 		String tagline = "This is Web Market";
@@ -53,10 +54,6 @@
 			out.println("현재 시각: " + CT + "\n");
 		%>
 	</div>
-	
-	<footer class = "container">
-		<p>&copy; WebMarket</p>
-	</footer>
-	
+	<%@ include file="footer.jsp" %>	
 </body>
 </html>

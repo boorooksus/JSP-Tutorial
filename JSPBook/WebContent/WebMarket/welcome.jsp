@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.Calendar" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +32,26 @@
 		<h3>
 			<%= tagline %>
 		</h3>
+		<%
+			//DateTime day = new DateTime();
+			Calendar day = Calendar.getInstance();
+			String am_pm;
+			int hrs = day.get(Calendar.HOUR);
+			int min = day.get(Calendar.MINUTE);
+			int sec = day.get(Calendar.SECOND);
+			//int hrs = day.getHourOfDay();
+			//int min = day.getMinuteOfDay();
+			//int sec = day.getSecondOfDay();
+			if (hrs / 12 == 0){
+				am_pm = "AM";
+			}
+			else{
+				am_pm = "pm";
+				hrs -= 12;
+			}
+			String CT = hrs + ":" + min + ":" + sec + " " + am_pm;
+			out.println("현재 시각: " + CT + "\n");
+		%>
 	</div>
 	
 	<footer class = "container">

@@ -9,29 +9,34 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<title>상품 상세 정보</title>
+<title>product</title>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
 	<div class="jumbotron">
 		<div class="container">
-			<h2 class="display-3">상품 정보</h2>
+			<h2 class="display-3">상품 목록</h2>
 		</div>
 	</div>
-	<%	
-		String id = request.getParameter("id");
-		Product product = productDAO.getProductById(id);
+	<%
+		ArrayList<Product> listOfProducts = productDAO.getAllProducts();
 	%>
 	<div class = "container">
-		<div class="row">
-			<div class="col-md-6">
+		<div class="row" align="center">
+			<%
+				for(int i = 0; i < listOfProducts.size(); i++){
+					Product product = listOfProducts.get(i);
+				
+			%>
+			<div class="col-md-4">
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %></p>
-				<p><b>상품 코드: </b><span class="badge badge-danger"><%= product.getProductId() %></span>
 				<p><%=product.getUnitPrice() %>원</p>
-				<p> <a href="#" class="btn btn-info">상품 주문 &raquo;</a>
-				<p><a href="./products.jsp" class="btn btn-secondary">상품 목록 &raquo;></a></p>
+				<p><a href="./product.jsp?id=<%=product.getProductId() %>" class="btn btn-secondary" role="button">상세정보 &raquo;></a></p>
 			</div>
+			<%
+				}
+			%>
 		</div>
 		<hr>
 	</div>

@@ -34,6 +34,7 @@
 			<%= tagline %>
 		</h3>
 		<%
+			response.setIntHeader("Refresh", 5);
 			//DateTime day = new DateTime();
 			Calendar day = Calendar.getInstance();
 			String am_pm;

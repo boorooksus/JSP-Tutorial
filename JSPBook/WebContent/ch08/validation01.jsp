@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>file upload</title>
+<title>validation</title>
 </head>
 <body>
-<script type="text/javascript">
+<script>
 	function CheckForm(){
 		alert("id: " + document.loginForm.id.value + "\n" + "password: " + document.loginForm.pwd.value);
 	}

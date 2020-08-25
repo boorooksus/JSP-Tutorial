@@ -32,6 +32,8 @@
 			%>
 			<div class="col-md-4">
 				<img src="./resources/images/<%=product.getFilename() %>" style="width:100%" >
+<%-- 				<img src="C:/Users/booro/Desktop/JSP/JSP-Tutorial/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/webapps/images/<%=product.getFilename() %>" style="width:100%" >
+				<img src="C:/upload/<%=product.getFilename() %>" style="width:100%" > --%>
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %></p>
 				<p><%=product.getUnitPrice() %>원</p>

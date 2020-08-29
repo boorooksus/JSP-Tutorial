@@ -12,7 +12,7 @@
 		Connection conn = null;
 		String url = "jdbc:mysql://localhost:3306/jspbookdb?serverTimezone=UTC";
 		String user = "root";
-		String password = "123456";
+		String password = "##########################";
 		
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(url, user, password);

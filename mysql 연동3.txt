@@ -1,0 +1,1 @@
+mysql connector jar파일을 tomcat 폴더내의 lib 폴더에도 넣어야 정상적으로 연동 가능!

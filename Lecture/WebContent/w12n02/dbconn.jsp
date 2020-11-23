@@ -10,7 +10,7 @@
 <body>
 	<%
 		Connection conn = null;
-		String url = "jdbc:mysql://localhost:3306/jspbookdb?serverTimezone=UTC";
+		String url = "jdbc:mysql://localhost:3306/userdb?serverTimezone=UTC";
 		String user = "root";
 		String password = "123456";
 		
